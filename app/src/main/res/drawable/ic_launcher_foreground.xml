@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Caja de envío isométrica dentro de la zona segura (66dp centrales). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Cara superior -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M54,30L76,41L54,52L32,41Z" />
+    <!-- Cara izquierda -->
+    <path
+        android:fillColor="#FFDCE3EC"
+        android:pathData="M32,44L52,54L52,78L32,67Z" />
+    <!-- Cara derecha -->
+    <path
+        android:fillColor="#FFB9C6D6"
+        android:pathData="M76,44L56,54L56,78L76,67Z" />
+    <!-- Cinta roja -->
+    <path
+        android:fillColor="@color/brand_red"
+        android:pathData="M43,35.5L65,46.5L65,53L60,55.5L60,49L38,38Z" />
+</vector>

@@ -1,0 +1,114 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "30f074bf192e9f54e35450c54966ca73",
+    "entities": [
+      {
+        "tableName": "paquetes",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`guia` TEXT NOT NULL, `pilotoId` TEXT, `cliente` TEXT NOT NULL, `telefono` TEXT NOT NULL, `direccion` TEXT NOT NULL, `zona` TEXT NOT NULL, `estado` TEXT NOT NULL, `observaciones` TEXT, `ultimaActualizacion` TEXT, `detalleCargado` INTEGER NOT NULL, `syncPendiente` INTEGER NOT NULL, `fechaCambio` TEXT, `observacionesPendientes` TEXT, `avisoSync` TEXT, PRIMARY KEY(`guia`))",
+        "fields": [
+          {
+            "fieldPath": "guia",
+            "columnName": "guia",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "pilotoId",
+            "columnName": "pilotoId",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "cliente",
+            "columnName": "cliente",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "telefono",
+            "columnName": "telefono",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "direccion",
+            "columnName": "direccion",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "zona",
+            "columnName": "zona",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "estado",
+            "columnName": "estado",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "observaciones",
+            "columnName": "observaciones",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "ultimaActualizacion",
+            "columnName": "ultimaActualizacion",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "detalleCargado",
+            "columnName": "detalleCargado",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "syncPendiente",
+            "columnName": "syncPendiente",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fechaCambio",
+            "columnName": "fechaCambio",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "observacionesPendientes",
+            "columnName": "observacionesPendientes",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "avisoSync",
+            "columnName": "avisoSync",
+            "affinity": "TEXT"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "guia"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_paquetes_pilotoId",
+            "unique": false,
+            "columnNames": [
+              "pilotoId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_paquetes_pilotoId` ON `${TABLE_NAME}` (`pilotoId`)"
+          }
+        ]
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '30f074bf192e9f54e35450c54966ca73')"
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+# Gradle / Kotlin
+.gradle/
+.kotlin/
+build/
+
+# Android Studio (configuración local de cada máquina)
+.idea/
+*.iml
+local.properties
+captures/
+.externalNativeBuild/
+.cxx/
+.DS_Store
+
+# Firma de release (nunca versionar)
+keystore.properties
+*.jks
+*.keystore

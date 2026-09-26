@@ -1,0 +1,9 @@
+# Finales de línea normalizados en el repo
+* text=auto
+# Scripts: gradlew debe ser LF (si no, falla en Linux/CI); los .bat, CRLF
+gradlew text eol=lf
+*.bat text eol=crlf
+# Binarios
+*.jar binary
+*.png binary
+*.ttf binary

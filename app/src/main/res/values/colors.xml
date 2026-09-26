@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Paleta Cargo Expreso (extraída de cargoexpreso.com/tracking) -->
+    <color name="brand_navy">#FF0C243E</color>
+    <color name="brand_navy_dark">#FF091B32</color>
+    <color name="brand_red">#FFD32027</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>

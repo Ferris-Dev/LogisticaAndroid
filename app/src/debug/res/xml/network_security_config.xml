@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Solo debug: el backend local corre en http://. Cualquier otro dominio sigue exigiendo HTTPS. -->
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <!-- localhost de la PC visto desde el emulador -->
+        <domain includeSubdomains="false">10.0.2.2</domain>
+        <!-- IP de la PC en la Wi-Fi, para probar en un celular físico (puede cambiar) -->
+        <domain includeSubdomains="false">192.168.1.2</domain>
+    </domain-config>
+</network-security-config>

@@ -11,11 +11,12 @@ plugins {
 
 // URL base del API por build type (debe terminar en "/", requisito de Retrofit).
 // - debug:   emulador → PC (10.0.2.2). Celular físico: ./gradlew assembleDebug -PBASE_URL=http://192.168.1.2:8080/
-// - release: servidor en Railway. ./gradlew assembleRelease -PRELEASE_BASE_URL=https://<dominio>.up.railway.app/
+//            Debug contra producción: ./gradlew assembleDebug -PBASE_URL=https://logisticabackend-production.up.railway.app/
+// - release: backend desplegado en Railway (HTTPS). Otro entorno: -PRELEASE_BASE_URL=https://.../
 // También se pueden fijar en gradle.properties o ~/.gradle/gradle.properties.
 val debugBaseUrl: String = (project.findProperty("BASE_URL") as String?) ?: "http://10.0.2.2:8080/"
 val releaseBaseUrl: String = (project.findProperty("RELEASE_BASE_URL") as String?)
-    ?: "https://CAMBIAR-DOMINIO.up.railway.app/"
+    ?: "https://logisticabackend-production.up.railway.app/"
 
 // Credenciales de firma: keystore.properties (no versionado) o variables de entorno (CI).
 val keystoreProps = Properties().apply {

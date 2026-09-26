@@ -59,8 +59,8 @@ La URL del API se define **por build type** como `BuildConfig.BASE_URL` (`app/bu
 
 | Build | Valor por defecto | Cambiarlo sin tocar código |
 |---|---|---|
-| `debug` | `http://10.0.2.2:8080/` (la PC vista desde el emulador) | `./gradlew assembleDebug -PBASE_URL=http://192.168.1.2:8080/` (celular físico en la misma Wi-Fi) |
-| `release` | `https://CAMBIAR-DOMINIO.up.railway.app/` (**provisional**) | `./gradlew assembleRelease -PRELEASE_BASE_URL=https://<dominio>.up.railway.app/` |
+| `debug` | `http://10.0.2.2:8080/` (la PC vista desde el emulador) | `./gradlew assembleDebug -PBASE_URL=http://192.168.1.2:8080/` (celular físico en la misma Wi-Fi) o `-PBASE_URL=https://logisticabackend-production.up.railway.app/` (debug contra producción) |
+| `release` | `https://logisticabackend-production.up.railway.app/` (backend en Railway) | `./gradlew assembleRelease -PRELEASE_BASE_URL=https://otro-entorno/` |
 
 Las dos propiedades también se pueden fijar en `gradle.properties` o en `~/.gradle/gradle.properties`.
 
